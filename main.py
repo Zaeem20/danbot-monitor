@@ -8,9 +8,12 @@ from counts import counts
 import time
 import os
 Count=counts()
-api = os.environ['api']
-psid = os.environ['psid']
-bsid = os.environ['bsid']
+
+o = open("config.json", "r")
+
+api = o["apikey"]
+psid = o["psid"]
+bsid = o["bsid"]
 
 def rcheck(server):
   url=f'https://panel.danbot.host/api/client/servers/{server}/resources'
