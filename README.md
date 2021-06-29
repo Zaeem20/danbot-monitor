@@ -13,15 +13,15 @@
  
  ### Installation
  Auto Method:- </br>
- • python install.py
+ • ```python install.py```
  
  ### Manual Method
- • Edit config.json</br>
- • Add All Your Cridential in it (Don't Remove Double Quote)</br>
- • just excute main.py script with </br>
+ • Edit ```config.json```</br>
+ • Add All Your Cridentials in it (Don't Remove Double Quote)</br>
+ • just excute ```main.py``` script with </br>
  
  ### Module Required
- • pip install -r requirements.txt
+ • ```pip install -r requirements.txt```
  
 Note:- If You are using repl it you have to install flask and UptimeRobot 
 
