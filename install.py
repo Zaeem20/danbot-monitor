@@ -11,8 +11,8 @@ print("Auto Setup Script")
 print 
 time.sleep(2)
 apikey = input("Enter API key:- ")
-bsid = input("Enter BSID")
-psid = input("Enter PSID")
+bsid = input("Enter BSID:- ")
+psid = input("Enter PSID:- ")
 data={}
 data["apikey"]=apikey
 data["bsid"]=bsid
