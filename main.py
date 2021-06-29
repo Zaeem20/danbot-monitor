@@ -7,9 +7,11 @@ import requests
 from counts import counts
 import time
 import os
+import json
 Count=counts()
 
-o = open("config.json", "r")
+with open("config.json", "r") as f:
+  o=json.load(f)
 
 api = o["apikey"]
 psid = o["psid"]
