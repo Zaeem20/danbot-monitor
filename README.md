@@ -1,7 +1,8 @@
 ## DanBot-uptime
 
 # Requirements
-Python 3.8+
+• Python 3.8+</br>
+• This JSON File
 ```json
 {
 "apikey": "your Api key",
@@ -12,6 +13,10 @@ Python 3.8+
  
  # Installation
  </br>
+  Auto Method:- </br>
+ • python install.py
+ 
+ # Manual Method
  • Edit config.json</br>
  • Add All Your Cridential in it (Don't Remove Double Quote)</br>
  • just excute main.py script with </br>
