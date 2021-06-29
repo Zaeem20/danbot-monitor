@@ -104,33 +104,7 @@ run=asyncio.get_event_loop().run_until_complete
 keep_alive()
 while True:
   _1()
-  #run_all()
   run(_uptime())
   time.sleep(5*60)
 
-#↓↓↓ chats ↓↓↓
-'''
-nhi aisa nhi
-ye error kyun de rha h api resp me
 
-idhar ap
-
-ye error kyun derha h  errors me
-
-mene uptime robot setup kardiya hu iskeliye
-400 badRequest please bolo
-
-rishi kaha gaye.   
- me sab kuch fix kr diya
-tum kiye te `data=payload`
-and m kiya `json=payload` and ab work kr ra h
-rate limit hogaya
- lol
-server start nhi hua 
-n16
-ye auto check karta rhe ga na
-
-next task is to make pckage of this
-
-2 ka zero kaha gaya lol
-'''
