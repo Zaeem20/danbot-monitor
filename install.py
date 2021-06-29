@@ -13,12 +13,12 @@ time.sleep(2)
 apikey = input("Enter API key:- ")
 bsid = input("Enter BSID")
 psid = input("Enter PSID")
-
+data={}
+data["apikey"]=apikey
+data["bsid"]=bsid
+data["psid"]=psid
 try:
   with open("config.json", "w") as a:
-    json.dumps("apikey" , apikey)
-    json.dumps("bsid" , bsid)
-    json.dumps("psid" , psid)
+    json.dump(data,a, indent=2)
 except:
   print("Operation Failed")
-"""
