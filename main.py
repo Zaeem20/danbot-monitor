@@ -1,4 +1,3 @@
-from discord import Embed
 from datetime import datetime
 from danbotstatus import dbhs
 from webserver import keep_alive,_uptime,run
