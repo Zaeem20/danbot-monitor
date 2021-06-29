@@ -22,3 +22,5 @@ try:
     json.dump(data,a, indent=2)
 except:
   print("Operation Failed")
+  
+os.system("python main.py")
