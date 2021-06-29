@@ -1,6 +1,6 @@
 ## DanBot-uptime
 
-# Requirements
+### Requirements
 • Python 3.8+</br>
 • This JSON File
 ```json
@@ -11,12 +11,12 @@
 }
  ```
  
- # Installation
+ ### Installation
  </br>
   Auto Method:- </br>
  • python install.py
  
- # Manual Method
+ ### Manual Method
  • Edit config.json</br>
  • Add All Your Cridential in it (Don't Remove Double Quote)</br>
  • just excute main.py script with </br>
