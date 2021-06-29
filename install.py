@@ -1,14 +1,15 @@
 # Auto Setup Script
 import json
 import time
+import platform
 import os
 
 
 #this is auto setup script which make json file 
-print("033\[1;92m")
+print("\033[1;92m")
 
 print("Auto Setup Script")
-print 
+print('')
 time.sleep(2)
 apikey = input("Enter API key:- ")
 bsid = input("Enter BSID:- ")
@@ -20,7 +21,15 @@ data["psid"]=psid
 try:
   with open("config.json", "w") as a:
     json.dump(data,a, indent=2)
+    print(" ")
+    print("Operation Completed")
+    print("Executing main file")
+    time.sleep(3)
+    if platform.system() == 'Linux':
+      os.system("clear")
+      os.system("python null.py")
+    elif platform.system() == 'Windows':
+      os.system("cls")
+      os.system("python null.py")
 except:
   print("Operation Failed")
-  
-os.system("python main.py")
