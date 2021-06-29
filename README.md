@@ -21,7 +21,7 @@
  • just excute main.py script with </br>
  
  ### Module Required
- • pip install requests
+ • pip install -r requirements.txt
  
 Note:- If You are using repl it you have to install flask and UptimeRobot 
 
