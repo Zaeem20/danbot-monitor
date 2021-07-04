@@ -14,10 +14,14 @@ time.sleep(2)
 apikey = input("Enter API key:- ")
 bsid = input("Enter BSID:- ")
 psid = input("Enter PSID:- ")
+psnode = int(input("Enter PSNode no:- "))
+bsnode = int(input("Enter BSNode no:- "))
 data={}
 data["apikey"]=apikey
 data["bsid"]=bsid
 data["psid"]=psid
+data["psnode"]=psnode
+data["bsnode"]=bsnonde
 try:
   with open("config.json", "w") as a:
     json.dump(data,a, indent=2)
@@ -30,6 +34,6 @@ try:
       os.system("python null.py")
     elif platform.system() == 'Windows':
       os.system("cls")
-      os.system("python null.py")
+      os.system("python main.py")
 except:
   print("Operation Failed")
