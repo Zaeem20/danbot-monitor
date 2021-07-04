@@ -42,11 +42,7 @@ def ps(choice):
 
     response = requests.request('POST', url,json=payload, headers=headers)
     p="p"
-    o = rcheck(psid)
-    if 'running' or 'starting' or 'stopping' not in o:
-      print(f"Primary server is {choice+p if choice=='stop' else choice}ing Now {response.text}")
-    else:
-      return
+    print(f"Primary server is {choice+p if choice=='stop' else choice}ing Now {response.text}")
 
 def bs(choice):
     url = f'https://panel.danbot.host/api/client/servers/{bsid}/power'
@@ -59,11 +55,7 @@ def bs(choice):
 
     response = requests.request('POST', url,json=payload, headers=headers)
     p="p"
-    o = rcheck(bsid)
-    if "running" or 'starting' or 'stopping' not in o:
-      print(f"Backup server is {choice+p if choice=='stop' else choice}ing Now {response.text} ")
-    else:
-      return
+    print(f"Backup server is {choice+p if choice=='stop' else choice}ing Now {response.text}")
     
 
 @repeat(every(5).minutes)
@@ -79,14 +71,21 @@ def n10():
     return o['is_vm_online']
 
 def _1():
+  pse,bse=rcheck(psid),rcheck(bsid)
   node10,node16=n10(),n16()
   if not node10 and not node16:
     print("Both servers are down")
   elif node10 and node16:
-    print("Both server are running\nUsing Primary Server")
-    ps("kill")
     Count.add("both")
-    bs("start")
+    print("Both server are running\nUsing Primary Server")
+    if pse == "offline":
+      print("Started Server because it was offline")
+      ps("start")
+    elif bse == "running":
+      bs("kill")
+    else:
+      print("PS Running Already");return
+
   elif node16:
     print("Outage in node10\nStill using primary server")
     Count.add("node16")
@@ -103,6 +102,7 @@ run=asyncio.get_event_loop().run_until_complete
 keep_alive()
 while True:
   _1()
+  #run_all()
   run(_uptime())
   time.sleep(5*60)
 
