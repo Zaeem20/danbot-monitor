@@ -1,5 +1,7 @@
 {
  "apikey": "enter api key",
  "psid": "enter psid",
- "bsid": "enter bsid"
+ "bsid": "enter bsid",
+ "psnode": "enter psnode no."
+ "bsnode": "enter bsnode no"
 }
