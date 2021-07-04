@@ -15,6 +15,8 @@ with open("config.json", "r") as f:
 api = o["apikey"]
 psid = o["psid"]
 bsid = o["bsid"]
+psnode = o["psnode"]
+bsnode = o["bsnode"]
 
 def rcheck(server):
   url=f'https://panel.danbot.host/api/client/servers/{server}/resources'
@@ -60,14 +62,14 @@ def bs(choice):
 
 @repeat(every(5).minutes)
 def n16():
-    o = dbhs.getnodestatus(16)
+    o = dbhs.getnodestatus(psnode)
     return o['is_vm_online']
     
 
 
 @repeat(every(5).minutes)
 def n10():
-    o = dbhs.getnodestatus(10)
+    o = dbhs.getnodestatus(bsnode)
     return o['is_vm_online']
 
 def _1():
