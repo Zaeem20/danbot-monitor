@@ -5,10 +5,13 @@
 • This JSON File
 ```json
 {
-"apikey": "your Api key",
-"psid": "Primary Server ID",
-"bsid": "Backup server ID"
+ "apikey": "enter api key",
+ "psid": "enter psid",
+ "bsid": "enter bsid",
+ "psnode": "enter psnode no.",
+ "bsnode": "enter bsnode no"
 }
+
  ```
  
  ### Installation
