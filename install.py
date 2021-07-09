@@ -1,4 +1,5 @@
 # Auto Setup Script
+# this  script will automate work
 import json
 import time
 import platform
