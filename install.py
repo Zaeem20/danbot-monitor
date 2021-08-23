@@ -32,7 +32,7 @@ try:
     time.sleep(3)
     if platform.system() == 'Linux':
       os.system("clear")
-      os.system("python null.py")
+      os.system("python3 main.py")
     elif platform.system() == 'Windows':
       os.system("cls")
       os.system("python main.py")
